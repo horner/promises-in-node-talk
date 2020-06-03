@@ -1,17 +1,15 @@
+// 2complexpromise.js
+
 // https://www.tomas-dvorak.cz/posts/nodejs-request-without-dependencies/
 require('log-timestamp');
 
 
 var http = require('http');
 http.createServer(function (req, res) {
-//  console.log("Got request");
   res.writeHead(200, {'Content-Type': 'text/plain'});
-//  setTimeout(()=>{
     res.write('Hello World!');
     res.end();
-//  },1000);
 }).listen(8080);
-
 
 const getContent = function(url, msg, tsbegin) {
     // return new pending promise
@@ -54,16 +52,6 @@ function testPromise() {
   .catch((err) => console.error(err));
 }
 
-async function testAwait() {
-  var list = [];
-  for (i = 0; i < 500; i++) { 
-    list.push(getContent('http://localhost:8080/',i, Date.now()));
-  }
-  var log = await Promise.all(list);
-  console.log(log);
-}
-
-//testAwait();
 testPromise();
 
 console.log("here");
