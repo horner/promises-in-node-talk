@@ -1,5 +1,6 @@
 
 # Promise Playground
+https://github.com/horner/promises-in-node-talk
 
 * Watch [The Async Await Episode I Promised](https://www.youtube.com/watch?v=vn3tm0quoqE)
 * Then watch [Jake Archibald: In The Loop - JSConf.Asia](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
