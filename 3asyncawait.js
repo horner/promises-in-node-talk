@@ -40,8 +40,12 @@ async function testAwait() {
   for (i = 0; i < 500; i++) { 
     list.push(getContent('http://localhost:8080/',i, Date.now()));
   }
-  var log = await Promise.all(list);
-  console.log(log);
+  try {
+    var log = await Promise.all(list);
+    console.log(log);      
+  } catch (error) {
+    console.error("Error:",error);
+  }
 }
 
 testAwait();

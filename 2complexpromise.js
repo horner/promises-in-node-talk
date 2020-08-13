@@ -48,7 +48,7 @@ function testPromise() {
   }
   
   Promise.all(list)
-  .then((html) => { html.forEach(e => console.log(e)); process.exit(1); } )
+  .then((html) => { html.forEach(e => console.log(e)); } )
   .catch((err) => console.error(err));
 }
 

@@ -2,6 +2,8 @@
 
 // https://www.tomas-dvorak.cz/posts/nodejs-request-without-dependencies/
 
+
+// Start an HTTP server (look how simeple)
 var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -46,7 +48,7 @@ function testPromise() {
   }
   
   Promise.all(list)
-  .then((html) => { html.forEach(e => console.log(e)); process.exit(1); } )
+  .then((html) => { html.forEach(e => console.log(e)); } )
   .catch((err) => console.error(err));
 }
 
