@@ -3,7 +3,7 @@
 // https://www.tomas-dvorak.cz/posts/nodejs-request-without-dependencies/
 
 
-// Start an HTTP server (look how simeple)
+// Start an HTTP server (look how simple)
 var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -14,7 +14,7 @@ http.createServer(function (req, res) {
 const getContent = function(url, msg, tsbegin) {
     // return new pending promise
     return new Promise((resolve, reject) => {
-      // select http or https module, depending on reqested url
+      // select http or https module, depending on requested url
       const lib = url.startsWith('https') ? require('https') : require('http');
       const request = lib.get(url, (response) => {
         // handle http errors
