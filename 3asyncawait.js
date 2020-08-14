@@ -15,7 +15,7 @@ http.createServer(function (req, res) {
 const getContent = function(url, msg, tsbegin) {
     // return new pending promise
     return new Promise((resolve, reject) => {
-      // select http or https module, depending on reqested url
+      // select http or https module, depending on requested url
       const lib = url.startsWith('https') ? require('https') : require('http');
       const request = lib.get(url, (response) => {
         // handle http errors
